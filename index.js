@@ -28,6 +28,14 @@ cells.forEach(cell =>{
     })
 })
 
+restartBtn.addEventListener('click', () =>{
+    cells.forEach(cell =>{
+        cell.innerHTML = ''
+    })
+    statusText.innerHTML = ''
+})
+
+
 const checkWin = () =>{
     for(const condition of winConditions){
         const [a,b,c] = condition

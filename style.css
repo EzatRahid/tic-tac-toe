@@ -7,14 +7,30 @@
 }
 
 #game-container{
-    
+    height: 100vh;
+}
+h1{
+    text-align: center;
+}
+.cell-border{
+height: 500px;
+width: 500px;
+border: 5px solid #000;
+border-radius: 25px;
+padding: 30px;
+
+}
+.cellDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cell{
-    width: 75px;
-    height: 75px;
+    width: 150px;
+    height: 150px;
     border: 2px solid;
-    font-size: 50px;
+    font-size: 100px;
     cursor: pointer;
     text-align: center;
 }
@@ -22,6 +38,5 @@
 .cell-container{
     display: grid;
     grid-template-columns: repeat(3, auto);
-    width: 225px;
-   margin: auto;
+    width: 255px
 }
