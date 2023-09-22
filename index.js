@@ -3,13 +3,18 @@ let statusText = document.querySelector('#statusText')
 let restartBtn = document.querySelector('#restart')
 
 
-const playerX = 'X'
+let currentPlayer = 'X'
 
-cells.addEventListener('click', () =>{
-    let cellNode = document.createTextNode(playerX)
-
-    cells.forEach(cell =>{
-    cell.innerHTML = playerX
+cells.forEach(cell =>{
+    cell.addEventListener('click',()=>{
+        if(cell.innerHTML === ''){
+            cell.innerHTML = currentPlayer
+           if(currentPlayer === 'X'){
+            currentPlayer ='O'
+           }else if(currentPlayer === 'O'){
+            currentPlayer = 'X'
+           }
+        }
     })
 })
 
@@ -17,17 +22,17 @@ cells.addEventListener('click', () =>{
 
 
 
-// const winConditions = [
-//     [0,1,2],
-//     [3,4,5],
-//     [6,7,8],
-//     [0,3,6],
-//     [1,4,7],
-//     [2,5,8],
-//     [0,4,8],
-//     [2,4,6],
+const winConditions = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6],
     
-// ]
+]
 
 // let options = ['','','','','','','','','','','']
 
