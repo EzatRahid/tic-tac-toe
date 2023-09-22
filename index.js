@@ -3,15 +3,20 @@ let statusText = document.querySelector('#statusText')
 let restartBtn = document.querySelector('#restart')
 
 
+const playerX = 'X'
 
+cells.addEventListener('click', () =>{
+    let cellNode = document.createTextNode(playerX)
 
-cells.forEach(cell =>{
-    let node = document.createTextNode();
-
+    cells.forEach(cell =>{
+    cell.innerHTML = playerX
+    })
 })
-cells.addEventListener("click",(cell) =>{
-    cell.innerHTML = 'X'
-})
+
+
+
+
+
 // const winConditions = [
 //     [0,1,2],
 //     [3,4,5],
