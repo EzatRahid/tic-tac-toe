@@ -32,12 +32,35 @@ const winConditions = [
     
 ]
 
+
+
 const checkWin = () =>{
     for(const condition of winConditions){
         const [a,b,c] = condition
+
+        const cellA = cells[a].innerHTML
+        const cellB = cells[b].innerHTML
+        const cellC = cells[c].innerHTML
+
+        if(cellA && cellA === cellB && cellA === cellC ){
+            statusText.innerHTML = `Player ${cellA}`
+            return;
+        }
+
     }
 }
 
+let cellsFilled = true
+
+cells.forEach(cell =>{
+    if(cell.innerHTML === ''){
+        cellsFilled = false
+    }
+})
+
+if(cellsFilled === false){
+    statusText.innerHTML = `Game is draw!`
+}
 // let options = ['','','','','','','','','','','']
 
 // let currentPlayer = 'X'
