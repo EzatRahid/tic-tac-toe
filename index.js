@@ -14,12 +14,10 @@ cells.forEach(cell =>{
            }else if(currentPlayer === 'O'){
             currentPlayer = 'X'
            }
+           checkWin();
         }
     })
 })
-
-
-
 
 
 const winConditions = [
@@ -33,6 +31,12 @@ const winConditions = [
     [2,4,6],
     
 ]
+
+const checkWin = () =>{
+    for(const condition of winConditions){
+        const [a,b,c] = condition
+    }
+}
 
 // let options = ['','','','','','','','','','','']
 
