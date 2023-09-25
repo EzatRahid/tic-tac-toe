@@ -37,14 +37,24 @@ const checkWin = () =>{
         const cellC = cells[c].innerHTML
 
         if(cellA && cellA === cellB && cellA === cellC){
-            
+            statusText.innerHTML = `Player ${cellA}`
         }
-
     }
+    return
 }
 
 
+let allCellsFilled = true
 
+cells.forEach(cell =>{
+    if(cell.innerHTML=== ''){
+        allCellsFilled =false
+    }
+})
+
+if(!allCellsFilled){
+    statusText.innerHTML = 'Game is a tie bru!'
+}
 
 
 
