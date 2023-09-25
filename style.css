@@ -12,14 +12,14 @@
 h1{
     text-align: center;
 }
-.cell-border{
+/* .cell-border{
 height: 500px;
 width: 500px;
 border: 5px solid #000;
 border-radius: 25px;
 padding: 30px;
 
-}
+} */
 .cellDiv{
     display: flex;
     justify-content: center;
