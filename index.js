@@ -12,6 +12,7 @@ cells.forEach(cell =>{
     cell.addEventListener('click', () =>{
         cell.innerHTML = currentPlayer
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+        checkWin();
     })
 })
 
@@ -37,8 +38,9 @@ const checkWin = () =>{
         const cellC = cells[c].innerHTML
 
         if(cellA && cellA === cellB && cellA === cellC){
-            statusText.innerHTML = `Player ${cellA}`
+            statusText.innerHTML = `Player ${cellA} has won`
         }
+        
     }
     return
 }
